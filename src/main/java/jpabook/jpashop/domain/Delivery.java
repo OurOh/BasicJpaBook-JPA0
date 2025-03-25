@@ -1,6 +1,7 @@
 package jpabook.jpashop.domain;
 
 import jakarta.persistence.*;
+import jpabook.jpashop.domain.valueType.Address;
 
 @Entity
 public class Delivery extends BaseEntity{

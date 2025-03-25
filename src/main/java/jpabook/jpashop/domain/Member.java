@@ -1,6 +1,8 @@
 package jpabook.jpashop.domain;
 
 import jakarta.persistence.*;
+import jpabook.jpashop.domain.valueType.Address;
+import jpabook.jpashop.domain.valueType.Period;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -22,7 +24,7 @@ public class Member extends BaseEntity {
     private Period wordPeriod;
 
     @Embedded
-    private Address Address;
+    private jpabook.jpashop.domain.valueType.Address Address;
 
     @OneToMany(mappedBy = "member") // 외래키 주인을 맴핑한다.
     private List<Order> orders = new ArrayList<>();
